@@ -57,14 +57,10 @@
       padding: 1em;
       margin: 0;
     }
-    .skills div {
-      display: inline-block;
-      width: 50%;
-    }
     .content {
       padding: 0 1em 1em 1em;
     }
-    .section-header h2 {
+    .section-header {
       text-transform: uppercase;
       color: #444;
       border-top: 0.5em solid #ccc;
@@ -73,18 +69,18 @@
     }
     .company { margin-top: 0; margin-bottom: 0; }
     .duty { margin-top: 0.2em; margin-bottom: 0.7em; }
-    .col-50 {
-      display: inline-block;
-      width: 50%;
+    .two-cols {
+      display: flex;
     }
-
+    .two-cols div {
+      flex: 50%;
+    }
     .info {
       color:#236;
       font-weight: bold;
       padding-right: 0.5em;
       position: relative;
     }
-
     @page {
       size: A4;
       margin: 0;
@@ -122,11 +118,12 @@
       <div class="summary">
         Looking for a remote job position in ML startup.
       </div>
-      <div class="skills">
+      <div class="two-cols skills">
         <div>
           Network&nbsp;services, Web, CI/CD, GIS, Cryptography<br>
           Elasticsearch, Clickhouse, PostGIS, MySQL
-        </div><div>
+        </div>
+        <div>
           Nginx, Docker, AWS, Gitlab CI<br>
           Linux Administration, Ansible, Bash, Git
         </div>
@@ -135,19 +132,19 @@
 
     <div class="content">
 
-      <div class="section-header"><h2>Experience (10+ years in total)</h2></div>
+      <h2 class="section-header">Experience (10+ years)</h2>
 
-      <div class="section">
+      <div>
 
         <div class="position">
           <h3 class="company">Edadeal (Sep 2015 - Oct 2018)</h3>
           <p class="duty">
           Backend architecture guidance, developing REST API and other
-          microservices for mobile application backend, backoffice applications
+          microservices for mobile application backend, back office applications
           and utilities in Python and Go. In-house analytics solution using
           Yandex Table map-reduce system and Elasticsearch. Production
           infrastructure and services management via Gitlab CI and Ansible.
-          Fine-grained HTTP metrics collection utility and infrastructure.
+          Fine-grained HTTP metrics collection utility and monitoring infrastructure.
           </p>
         </div>
 
@@ -177,19 +174,22 @@
 
       </div>
 
-      <div class="section-header"><h2>Education</h2></div>
+      <h2 class="section-header">Education</h2>
 
-      <div class="section col-50">
-        <h3 class="company">Chelyabinsk State University</h3>
-        <p class="duty">Specialist, Computer Security, 2005 - 2011.</p>
-      </div><div class="section col-50">
-        <h3 class="company">Online Courses</h3>
-        <p class="duty">Cryptography, Machine Learning, Game Theory</p>
+      <div class="two-cols">
+          <div>
+            <h3 class="company">Chelyabinsk State University</h3>
+            <p class="duty">Specialist, Computer Security, 2005 - 2011.</p>
+          </div>
+          <div>
+            <h3 class="company">Online Courses</h3>
+            <p class="duty">Cryptography, Machine Learning, Game Theory</p>
+          </div>
       </div>
 
-      <div class="section-header"><h2>Hobby</h2></div>
+      <h2 class="section-header">Hobby</h2>
 
-      <div class="section">
+      <div>
         Traveling - tourism, trekking, hiking, feeling the universe, comprehend
         culture and people. Computer security competitions (CTF). Chinese tea.
         Music - I play the piano, flute, saxophone, tin whistle and ukulele.
